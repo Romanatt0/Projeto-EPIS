@@ -1,30 +1,30 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  .container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #2c2c2c;
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.botao{
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.botao {
   width: 500px;
   height: 120px;
   background-color: rgb(7, 7, 7);
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 50px; /* formato oval */
+  border-radius: 50px;
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 2px; /* espaço entre letras */
-  text-transform: uppercase; /* deixa tudo maiúsculo */
+  letter-spacing: 2px; 
+  text-transform: uppercase;
   cursor: pointer;
   margin: 15px 0;
   transition: 0.3s;
@@ -32,8 +32,8 @@
   align-items: center;
   justify-content: center;
 }
-.botao2{
 
+.botao2 {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
@@ -53,11 +53,20 @@
   margin-right: 10px;
 }
 
-#topo{
-  display: flex;
+#topo {
+  display: flex; 
   background-color: black;
   color: white;
-  padding-bottom: 1%;
+  padding: 1% 2%; 
+}
 
-  
+#usuario {
+  text-align: right; 
+}
+
+#usuario img {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
 }

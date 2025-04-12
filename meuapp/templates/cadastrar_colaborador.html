@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style.css' %}">
-
-    <title>Security System - Login</title>
-    
+    <title>Security System - Cadastro</title>
 </head>
 <body>
     <div class="container">
@@ -21,16 +19,17 @@
             <h2>Seja bem-vindo!</h2>
             <p>Faça cadastro do colaborador aqui:</p>
 
-            <form action="#" method="POST">
+            <!-- Formulário Django com CSRF token -->
+            <form method="POST">
+                {% csrf_token %}
                 <label for="usuario">Nome:</label>
                 <input type="text" id="usuario" name="usuario" required>
-
+            
                 <label for="senha">CPF:</label>
-                <input type="password" id="senha" name="senha" required>
-
+                <input type="text" id="senha" name="senha" required>
+            
                 <button type="submit">Cadastrar</button>
             </form>
-
         </div>
     </div>
 </body>
