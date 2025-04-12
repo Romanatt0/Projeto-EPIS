@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="pt-BR">
+{% load static %}
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Sistema de Segurança</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Colaborador</title>
   <link rel="stylesheet" href="{% static 'colaborador.css' %}">
 </head>
 <body>
-
-  <header class="header">
-    <h1>Security System</h1>
-  </header>
-
-  <main class="main-container">
-    <h2 class="title">Colaboradores</h2>
-    
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Pesquisar">
+  <div class="container">
+    <div class="sidebar">
+      <button>Equipamento</button>
+      <button>Controle EPI</button>
+      <button>Colaborador</button>
+      <div class="submenu">
+        <button>Cadastrar colaborador</button>
+        <button>Relatórios</button>
+        <button>Editar colaborador</button>
+      </div>
     </div>
 
-    <div class="content-box">
-      <!-- Conteúdo principal -->
-    </div>
-  </main>
+    <div class="content">
+      {% if sucesso %}
+        <div class="success-message">
+          Usuário cadastrado com sucesso!
+        </div>
+      {% endif %}
 
+      <form method="POST" action="{% url 'cadastrar_colaborador' %}" class="form-box">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo" placeholder="Digite o cargo" required>
+
+        <button type="submit" class="submit-btn">SALVAR</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

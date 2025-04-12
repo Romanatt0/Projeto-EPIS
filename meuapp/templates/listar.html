@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Colaboradores</title>
+</head>
+<body>
+  <h1>Colaboradores</h1>
+  <ul>
+    {% for colaborador in colaboradores %}
+      <li>{{ colaborador.nome }} - {{ colaborador.cargo }}</li>
+    {% empty %}
+      <li>Nenhum colaborador encontrado.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
