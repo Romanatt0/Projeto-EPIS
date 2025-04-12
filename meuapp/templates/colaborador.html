@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-{%load static%}
+{% load static %}
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -8,21 +7,42 @@
 </head>
 <body>
 
-  <header class="header">
-    <h1>Security System</h1>
-  </header>
-
-  <main class="main-container">
-    <h2 class="title">Colaboradores</h2>
-    
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Pesquisar">
+  <!-- Barra Lateral -->
+  <div class="sidebar">s
+    <div class="logo">
+      <span>S</span>
     </div>
+    <ul>
+      <li><a href="{% url 'colaborador' %}">Colaboradores</a>
+        <ul class="sub-menu">
+          <li><a href="{% url 'colaborador' %}">Listagem</a></li>
+          <li><a href= "{% url 'cadastrar_colaborador' %}">Cadastrar</a></li>
+          <li><a href="#">Editar</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Equipamento</a></li>
+      <li><a href="#">Controle de EPIs</a></li>
+    </ul>
+  </div>
 
-    <div class="content-box">
+  <!-- Conteúdo Principal -->
+  <div class="main-content">
+    <header class="header">
+      <h1>Security System</h1>
+    </header>
 
-    </div>
-  </main>
+    <main class="main-container">
+      <h2 class="title">Colaboradores</h2>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Pesquisar">
+      </div>
+
+      <div class="content-box">
+        <!-- Aqui pode ficar a listagem de colaboradores -->
+      </div>
+    </main>
+  </div>
 
 </body>
 </html>

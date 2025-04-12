@@ -8,28 +8,46 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Barra lateral -->
+        <div class="sidebar">
             <div class="logo">
                 <span>S</span>
             </div>
-            <h1>Security System</h1>
-        </header>
+            <ul>
+                <li><a href="#">Colaboradores</a>
+                    <ul class="sub-menu">
+                        <li><a href='{% url "colaborador" %}'>Listagem</a></li>
+                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="#">Editar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Equipamento</a></li>
+                <li><a href="#">Controle de EPIs</a></li>
+            </ul>
+        </div>
 
-        <div class="login-box">
-            <h2>Seja bem-vindo!</h2>
-            <p>Faça cadastro do colaborador aqui:</p>
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <header>
+                <h1>Security System</h1>
+            </header>
 
-            <!-- Formulário Django com CSRF token -->
-            <form method="POST">
-                {% csrf_token %}
-                <label for="usuario">Nome:</label>
-                <input type="text" id="usuario" name="usuario" required>
-            
-                <label for="senha">CPF:</label>
-                <input type="text" id="senha" name="senha" required>
-            
-                <button type="submit">Cadastrar</button>
-            </form>
+            <div class="login-box">
+                <h2>Seja bem-vindo!</h2>
+                <p>Faça cadastro do colaborador aqui:</p>
+
+                <!-- Formulário Django com CSRF token -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="usuario">Nome:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                
+                    <label for="senha">CPF:</label>
+                    <input type="text" id="senha" name="senha" required>
+                
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
