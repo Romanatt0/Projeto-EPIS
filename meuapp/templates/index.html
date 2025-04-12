@@ -1,11 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <title>Security System - Login</title>
+    
 </head>
 <body>
-    <p>Hello Word penis penis</p>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span>S</span>
+            </div>
+            <h1>Security System</h1>
+        </header>
+
+        <div class="login-box">
+            <h2>Seja bem-vindo!</h2>
+            <p>Faça login aqui:</p>
+
+            <form action="#" method="POST">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit">ENTRAR</button>
+            </form>
+
+            <hr>
+            <p class="ou">OU</p>
+            <button class="register-btn">Faça seu cadastro</button>
+        </div>
+    </div>
 </body>
 </html>
